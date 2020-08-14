@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>{{ html.title }}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ html.description }}">
+    <meta name="keywords" content="{{ html.keywords }}">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head> 
+
+<body>
+    <article class="resume-wrapper text-center position-relative">
+      <div class="resume-wrapper-inner mx-auto text-left bg-white shadow-lg">
+        {{#unless noheader}}
+        <header class="resume-header pt-4 pt-md-0">
+          <div class="media flex-column flex-md-row">
+            <img class="mr-3 img-fluid picture mx-auto" src="assets/images/profile.jpg" alt="">
+            <div class="media-body p-4 d-flex flex-column flex-md-row mx-auto mx-lg-0">
+              <div class="primary-info">
+                <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">{{ name }}</h1>
+                <div class="title mb-3">{{ jobtitle }}</div>
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <a href="mailto:{{ email }}">
+                      <i class="far fa-envelope fa-fw mr-2" data-fa-transform="grow-3"></i>{{ email }}
+                    </a>
+                  </li>
+                  {{#if tel }}
+                  <li>
+                    <a href="tel:{{ tel }}">
+                      <i class="fas fa-mobile-alt fa-fw mr-2" data-fa-transform="grow-6"></i>{{ tel }}
+                    </a>
+                  </li>
+                  {{/if}}
+                </ul>
+              </div>
+
+              {{#if links }}
+              <div class="secondary-info ml-md-auto mt-2">
+                <ul class="resume-social list-unstyled">
+                  {{#each links }}
+                    <li class="mb-3">
+                      <a href="{{ link }}">
+                        <span class="fa-container text-center mr-2">
+                          <i class="{{ icon }} fa-fw"></i>
+                        </span>{{ label }}
+                      </a>
+                    </li>
+                  {{/each}}
+                </ul>
+              </div>
+              {{/if}}
+              
+            </div><!--//media-body-->
+          </div><!--//media-->
+        </header>
+        {{/unless}}
+        <div class="resume-body p-5">
+          {{!-- intro section --}}
+          {{#if introduction }}
+          <section class="resume-section summary-section mb-5">
+            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">{{ introduction.title }}</h2>
+            <div class="resume-section-content">
+              <p class="mb-0">{{ introduction.summary }}</p>
+            </div>
+          </section>
+          {{/if}}
+          <div class="row">
+            <div class="col-lg-9">
+              <section class="resume-section experience-section mb-5">
+                <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">{{ experience.title }}</h2>
+                <div class="resume-section-content">
+                  <div class="resume-timeline position-relative">
+                    {{#each experience.items }}
+                    <article class="resume-timeline-item position-relative pb-5">
+                      <div class="resume-timeline-item-header mb-2">
+                        <div class="d-flex flex-column flex-md-row">
+                          <h3 class="resume-position-title font-weight-bold mb-1">{{ role }}
+                            {{#if subrole }}<small class="text-muted">({{ subrole}})</small>{{/if}}
+                          </h3>
+                          <div class="resume-company-name ml-auto">{{ org }}</div>
+                        </div>
+                        <div class="resume-position-time">{{ period }}</div>
+                      </div>
+                      <div class="resume-timeline-item-desc">
+                        {{{ desc }}}
+
+                        {{#if achievements}}
+                          <h4 class="resume-timeline-item-desc-heading font-weight-bold">{{ section_titles.achievements }}</h4>
+                          {{{ achievements }}}
+                        {{/if}}
+
+                        {{#if technologies}}
+                          <h4 class="resume-timeline-item-desc-heading font-weight-bold">{{ section_titles.technologies }}</h4>
+                          <ul class="list-inline">
+                            {{#each technologies}}
+                            <li class="list-inline-item"><span class="badge badge-primary badge-pill">{{ . }}</span></li>
+                            {{/each}}
+                          </ul>
+                        {{/if}}
+                      </div>
+                    </article>
+                    {{/each }}
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-3">
+              <section class="resume-section skills-section mb-5">
+                <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Skills &amp; Tools</h2>
+                <div class="resume-section-content">
+                    <div class="resume-skill-item">
+                      <h4 class="resume-skills-cat font-weight-bold">Frontend</h4>
+                      <ul class="list-unstyled mb-4">
+                        <li class="mb-2">
+                            <div class="resume-skill-name">Angular</div>
+                          <div class="progress resume-progress">
+                          <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 98%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                        </li>
+                        <li class="mb-2">
+                            <div class="resume-skill-name">React</div>
+                          <div class="progress resume-progress">
+                          <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 94%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                        </li>
+                        <li class="mb-2">
+                            <div class="resume-skill-name">JavaScript</div>
+                          <div class="progress resume-progress">
+                          <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 96%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                        </li>
+                        
+                        <li class="mb-2">
+                            <div class="resume-skill-name">Node.js</div>
+                          <div class="progress resume-progress">
+                          <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 92%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                        </li>
+                        <li class="mb-2">
+                            <div class="resume-skill-name">HTML/CSS/SASS/LESS</div>
+                          <div class="progress resume-progress">
+                          <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 96%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                        </li>
+                      </ul>
+                    </div><!--//resume-skill-item-->
+                    
+                    <div class="resume-skill-item">
+                        <h4 class="resume-skills-cat font-weight-bold">Backend</h4>
+                      <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <div class="resume-skill-name">Python/Django</div>
+                          <div class="progress resume-progress">
+                          <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 95%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                        </li>
+                        <li class="mb-2">
+                            <div class="resume-skill-name">Ruby/Rails</div>
+                          <div class="progress resume-progress">
+                          <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 92%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                        </li>
+                        <li class="mb-2">
+                            <div class="resume-skill-name">PHP</div>
+                          <div class="progress resume-progress">
+                          <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 86%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                        </li>
+                        <li class="mb-2">
+                            <div class="resume-skill-name">WordPress/Shopify</div>
+                          <div class="progress resume-progress">
+                          <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 82%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                        </li>
+                      </ul>
+                    </div><!--//resume-skill-item-->
+                    
+                    <div class="resume-skill-item">
+                        <h4 class="resume-skills-cat font-weight-bold">Others</h4>
+                        <ul class="list-inline">
+                          <li class="list-inline-item"><span class="badge badge-light">DevOps</span></li>
+                          <li class="list-inline-item"><span class="badge badge-light">Code Review</span></li>
+                          <li class="list-inline-item"><span class="badge badge-light">Git</span></li>
+                          <li class="list-inline-item"><span class="badge badge-light">Unit Testing</span></li>
+                          <li class="list-inline-item"><span class="badge badge-light">Wireframing</span></li>
+                          <li class="list-inline-item"><span class="badge badge-light">Sketch</span></li>
+                          <li class="list-inline-item"><span class="badge badge-light">Balsamiq</span></li>
+                          <li class="list-inline-item"><span class="badge badge-light">WordPress</span></li>
+                          <li class="list-inline-item"><span class="badge badge-light">Shopify</span></li>
+                        </ul>
+                    </div><!--//resume-skill-item-->
+                </div><!--resume-section-content-->
+              </section>
+              
+              {{!-- education section --}}
+              {{#if education }}
+              <section class="resume-section education-section mb-5">
+                <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">{{ education.title }}</h2>
+                <div class="resume-section-content">
+                  <ul class="list-unstyled">
+                    {{#each education.items }}
+                    {{#unless @last}}
+                    <li class="mb-2">
+                        <div class="resume-degree font-weight-bold">{{ degree }}</div>
+                        <div class="resume-degree-org">{{ institution }}</div>
+                        <div class="resume-degree-time">{{ period }}</div>
+                    </li>
+                    {{ else }}
+                    <li>
+                        <div class="resume-degree font-weight-bold">{{ degree }}</div>
+                        <div class="resume-degree-org">{{ institution }}</div>
+                        <div class="resume-degree-time">{{ period }}</div>
+                    </li>
+                    {{/unless}}
+                    {{/each}}
+                  </ul>
+                </div>
+              </section>
+              {{/if}}
+
+              {{!-- awards section --}}
+              {{#if awards }}
+              <section class="resume-section reference-section mb-5">
+                <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">{{ awards.title }}</h2>
+                <div class="resume-section-content">
+                  <ul class="list-unstyled resume-awards-list">
+                    {{#each awards.items }}
+                    {{#unless @last}}
+                    <li class="mb-2 pl-4 position-relative">
+                        <i class="resume-award-icon fas fa-trophy position-absolute" data-fa-transform="shrink-2"></i>
+                        <div class="resume-award-name">{{ name }}</div>
+                        <div class="resume-award-desc">{{ desc }}</div>
+                    </li>
+                    {{else}}
+                    <li class="mb-0 pl-4 position-relative">
+                        <i class="resume-award-icon fas fa-trophy position-absolute" data-fa-transform="shrink-2"></i>
+                        <div class="resume-award-name">{{ name }}</div>
+                        <div class="resume-award-desc">{{ desc }}</div>
+                    </li>
+                    {{/unless}}
+                    {{/each}}
+                  </ul>
+                </div>
+              </section>
+              {{/if}}
+
+              {{!-- languages section --}}
+              {{#if languages }}
+              <section class="resume-section language-section mb-5">
+                <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">{{ languages.title }}</h2>
+                <div class="resume-section-content">
+                  <ul class="list-unstyled resume-lang-list">
+                    {{#each languages.items }}
+                    {{#unless @last}}
+                    <li class="mb-2">
+                      <span class="resume-lang-name font-weight-bold">{{ lang }}</span>
+                      <small class="text-muted font-weight-normal">({{ level }})</small>
+                    </li>
+                    {{ else }}
+                    <li>
+                      <span class="resume-lang-name font-weight-bold">{{ lang }}</span>
+                      <small class="text-muted font-weight-normal">({{ level }})</small>
+                    </li>
+                    {{/unless}}
+                    {{/each}}
+                  </ul>
+                </div>
+              </section>
+              {{/if}}
+
+              {{!-- interests section --}}
+              {{#if interests}}
+              <section class="resume-section interests-section mb-5">
+                <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">{{ interests.title }}</h2>
+                <div class="resume-section-content">
+                  <ul class="list-unstyled">
+                    {{#each interests.items }}
+                    {{#unless @last}}
+                    <li class="mb-1">{{ . }}</li>
+                    {{ else }}
+                    <li>{{ . }}</li>
+                    {{/unless}}
+                    {{/each}}
+                  </ul>
+                </div>
+              </section>
+              {{/if}}
+              
+            </div>
+          </div><!--//row-->
+        </div><!--//resume-body-->
+        
+        
+      </div>
+    </article>  
+
+    
+    <footer class="footer text-center pt-2 pb-5">
+      <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+        <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+    </footer>
+
+    
+
+</body>
+</html>

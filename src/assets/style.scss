@@ -1,0 +1,23 @@
+// Define theme colour scheme
+{{#with theme }}
+  $theme-color-primary: {{ primary_color }};
+
+  $theme-text-color-primary: {{ text_primary_color }};
+  $theme-text-color-secondary: {{ text_sec_color }};
+  $theme-text-color-light: {{ text_light_color }};
+  $theme-border-color: {{ border_color }};
+  $theme-divider-color: {{ divider_color }};
+  $theme-bg-light: {{ bg_light_color }};
+  $theme-bg-dark: {{ bg_dark_color }};
+  $font-family: {{ font_family }};
+{{/with}}
+
+
+@import './pillar';
+
+
+@media print {
+  .resume-wrapper-inner {
+    box-shadow: none !important; 
+  }
+}

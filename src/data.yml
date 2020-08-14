@@ -1,0 +1,157 @@
+---
+layout: resume
+## html meta tags ||
+html:
+  title: 'Resume | Steve Doe'
+  description: Full stack developer with 8 years of experience
+  keywords: developer, resume, job, experience, front-end, back-end, database 
+
+## header ##
+name: Steve Doe
+jobtitle: Full Stack Developer
+email: steve.doe@website.com
+tel: '+66 555 444 333'
+
+links:
+  - link: https://linkedin.com/in/stevedoe
+    label: linkedin.com/in/stevedoe
+    icon: fab fa-linkedin-in
+  - link: https://github.com/stevedoe
+    label: github.com/stevedoe
+    icon: fab fa-github-alt
+  - link: https://codepen.io/stevedoe
+    label: codepen.io/stevedoe
+    icon: fab fa-codepen
+  - link: https://about.me/stevedoe
+    label: about.me/stevedoe
+    icon: fas fa-globe
+
+## intro section ##
+introduction:
+  title: Career summary
+  summary: >
+    Summarise your career here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+    You can download this free resume/CV template here. Aenean commodo ligula eget dolor aenean massa.
+    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    Donec quam felis, ultricies nec, pellentesque eu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+    Donec pede justo, fringilla vel, aliquet nec, vulputate eget.
+
+## languages section ##
+languages:
+  title: Languages
+  items:
+    - lang: English
+      level: Native
+    - lang: French
+      level: Professional
+    - lang: Spanish
+      level: Basic
+
+## interests section ##
+interests:
+  title: Interests
+  items:
+    - Cooking
+    - Climbing
+    - Snowboarding
+
+## education section ##
+education:
+  title: Education
+  items:
+    - degree: MSc in Computer Science
+      institution: University College London
+      period: 2010 - 2011
+    - degree: BSc Maths and Physics
+      institution: Imperial College London
+      period: 2007 - 2010
+
+## awards section ##
+awards:
+  title: Awards
+  items:
+    - name: Award Name Lorem
+      desc: Award desc goes here, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo.
+    - name: Award Name Lorem
+      desc: Award desc goes here, ultricies nec, pellentesque.
+
+## experience section ##
+experience:
+  title: Work Experience
+  section_titles:
+    technologies: Technologies used
+    achievements: Achievements
+  items:
+    - role: Lead Developer
+      org: Startup Hub
+      period: 2018 - Present
+      desc: >
+        <p>Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit.
+        Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec pede justo, fringilla vel.</p>
+      achievements: >
+        <p>Praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+        <ul>
+          <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
+          <li>At vero eos et accusamus et iusto odio dignissimos.</li>
+          <li>Blanditiis praesentium voluptatum deleniti atque corrupti.</li>
+          <li>Maecenas tempus tellus eget.</li>
+        </ul>
+      technologies: 
+        - Angular
+        - Python
+        - jQuery
+        - Webpack
+        - HTML/SASS
+        - PostgresSQL
+
+    - role: Senior Software Developer
+      org: Google
+      period: 2014 - 2018
+      desc: >
+        <p>Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit.
+        Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec pede justo, fringilla vel.</p>
+      achievements: >
+        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+      technologies: 
+        - React
+        - Redux
+        - Django
+        - Webpack
+        - HTML/SASS
+        - MySQL
+
+    - role: Co-Founder & Lead Developer
+      subrole: intern
+      org: To-do lists
+      period: 2012 - 2014
+      desc: >
+        <p>Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec.</p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+        Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+      technologies: 
+        - Django
+        - JavaScript
+        - Node.js
+        - Require.js
+        - HTML/SASS
+
+    - role: Web developer
+      org: Amazon
+      period: 2011 - 2012
+      desc: >
+        <p>Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit.
+        Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        Donec quam felis, ultricies nec. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.
+        Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum.</p>
+      technologies: 
+        - Ruby on Rails
+        - jQuery
+        - HTML/LESS
+        - MongoDB
+---
