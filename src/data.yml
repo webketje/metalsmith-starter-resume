@@ -1,16 +1,25 @@
 ---
 layout: resume
-## html meta tags ||
+
+## html meta tags ##
 html:
+  siteurl: '' # empty string for local development
+  lang: en
   title: 'Resume | Steve Doe'
   description: Full stack developer with 8 years of experience
   keywords: developer, resume, job, experience, front-end, back-end, database 
 
+## share tags ##
+twitter: '@SteveDoe' # set to user handle / true to enable, false to disable
+facebook: en_US      # set to locale if not en_US / true to enable, false to disable
+
 ## header ##
+noheader: false                     # set to false to remove the header
 name: Steve Doe
 jobtitle: Full Stack Developer
-email: steve.doe@website.com
-tel: '+66 555 444 333'
+photo: true                         # set to false to disable
+email: steve.doe@website.com        # set to false to disable
+tel: '+66 555 444 333'              # set to false to disable
 
 links:
   - link: https://linkedin.com/in/stevedoe
@@ -76,6 +85,49 @@ awards:
       desc: Award desc goes here, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo.
     - name: Award Name Lorem
       desc: Award desc goes here, ultricies nec, pellentesque.
+
+## skills & tools section ##
+skills_tools:
+  title: Skills & tools
+  sections:
+    - title: Frontend
+      progressbars: true
+      items:
+        - name: Angular
+          mastery: 98
+        - name: React
+          mastery: 94
+        - name: Javascript
+          mastery: 96
+        - name: Node.js
+          mastery: 92
+        - name: HTML/CSS/SASS/LESS
+          mastery: 96
+
+    - title: Backend
+      progressbars: true
+      items:
+        - name: Python/Django
+          mastery: 95
+        - name: Ruby/Rails
+          mastery: 92
+        - name: PHP
+          mastery: 86
+        - name: Wordpress/Shopify
+          mastery: 82
+
+    - title: Others
+      tags: true
+      items:
+        - DevOps
+        - Code Review
+        - Git
+        - Unit Testing
+        - Wireframing
+        - Sketch
+        - Balsamiq
+        - WordPress
+        - Shopify
 
 ## experience section ##
 experience:

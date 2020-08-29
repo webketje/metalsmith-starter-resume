@@ -12,9 +12,7 @@
   $font-family: {{ font_family }};
 {{/with}}
 
-
-@import './pillar';
-
+@import "./pillar";
 
 @media print {
   .resume-wrapper-inner {

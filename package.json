@@ -2,11 +2,11 @@
   "name": "metalsmith-resume",
   "version": "1.0.0",
   "description": "A professional online & print resume powered by metalsmith",
+  "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "node_modules/.bin/serve dist",
-    "start": "node index && npm run serve"
+    "start": "cross-env NODE_ENV=development node index",
+    "build": "cross-env NODE_ENV=production node index"
   },
   "keywords": [
     "metalsmith",
@@ -17,12 +17,15 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
     "bootstrap": "^4.5.2",
-    "metalsmith-sass": "^1.7.0",
     "metalsmith": "^2.3.0",
     "metalsmith-handlebars-x": "^0.2.3",
     "metalsmith-html-minifier": "^4.0.1",
     "metalsmith-if": "^0.1.1",
     "metalsmith-rename": "^1.0.0",
-    "serve": "^11.3.2"
+    "metalsmith-sass": "^1.7.0",
+    "metalsmith-serve": "0.0.7"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2"
   }
 }
