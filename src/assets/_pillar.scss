@@ -14,13 +14,13 @@ $theme-colors: (
 );
 
 //Import Bootstrap
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "bootstrap/scss/bootstrap";
 
 
 $fa-font-path: "webfonts";
-@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
-@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
-@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/solid";
+@import "@fortawesome/fontawesome-free/scss/brands";
 
 
 /*************************** Pillar Styles ****************************/

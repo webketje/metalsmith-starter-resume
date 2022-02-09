@@ -1,7 +1,6 @@
 // Define theme colour scheme
 {{#with theme }}
   $theme-color-primary: {{ primary_color }};
-
   $theme-text-color-primary: {{ text_primary_color }};
   $theme-text-color-secondary: {{ text_sec_color }};
   $theme-text-color-light: {{ text_light_color }};
@@ -16,6 +15,42 @@
 
 @media print {
   .resume-wrapper-inner {
+    max-width: 100%;
+    width: 100%
+  }
+  {{#if A4 }}
+  @page {
+    size: A4;
+    margin: 1cm;
+  }
+  html, body {
+    width: 210mm;
+    height: 297mm;
+  }
+  {{else}}
+  @page {
+    size: letter;
+    margin: 0.5in;
+  }
+  html, body {
+    width: 8.5in;
+    height: 11in;
+  }
+  {{/if}}
+  .experience-section {
+    page-break-after: always;
+    break-after: always;
+  }
+  .resume-wrapper-inner {
     box-shadow: none !important; 
+    width:100%;
+  }
+  .resume-section, .resume-timeline-item {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    position: relative;
+  }
+  .resume-body {
+    position: relative;
   }
 }
