@@ -3,6 +3,8 @@
 > A professional, responsive Bootstrap4-themed resume / CV, designed by Xiaoying Riley ([3rd Wave Media](https://themes.3rdwavemedia.com)).  
 > Made highly customizable with metalsmith, Handlebars & SCSS.
 
+**[DEMO](https://replit.com/@webketje/metalsmith-starter-resume)**
+
 Features a lot of customization, a print-friendly version, and twitter/ facebook/ linkedin share tags.
 
 ## Setup

@@ -19,7 +19,7 @@
     "@metalsmith/sass": "^1.0.0",
     "bootstrap": "^4.5.2",
     "cross-env": "^7.0.2",
-    "metalsmith": "^2.3.0",
+    "metalsmith": "^2.4.1",
     "metalsmith-handlebars-x": "^0.3.0",
     "metalsmith-html-minifier": "^4.0.1",
     "metalsmith-if": "^0.1.1",
